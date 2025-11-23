@@ -21,7 +21,7 @@ header {
   background: rgba(10, 10, 30, 0.8);
   backdrop-filter: blur(10px);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 12px 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -29,8 +29,10 @@ header {
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
+    position: absolute;
+    left: 25px; /* Logo pegado a la izquierda */
+    display: flex;
+    align-items: center;
 }
 
 /* ===== LOGO ANIMADO ===== */
@@ -70,15 +72,17 @@ header {
 }
 
 nav a {
-  color: #a6a4ff;
-  margin-left: 25px;
-  text-decoration: none;
-  transition: 0.3s;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.1rem;
+    color: #ffcdfd;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 nav a:hover {
-  color: #fff;
-  text-shadow: 0 0 15px #8b6fff;
+    color: #fff;
+    text-shadow: 0 0 12px #ff63ff;
 }
 
 /* ===== HERO ===== */
@@ -214,6 +218,7 @@ footer {
   background: rgba(10, 10, 25, 0.8);
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+
 
 
 
