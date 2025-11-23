@@ -88,7 +88,7 @@ nav a:hover {
 /* ===== HERO ===== */
 .hero {
   text-align: center;
-  padding-top: 140px;
+  padding-top: 60px;
   padding-bottom: 100px;
 }
 
@@ -225,6 +225,7 @@ footer {
   background: rgba(10, 10, 25, 0.8);
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+
 
 
 
