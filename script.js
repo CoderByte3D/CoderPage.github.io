@@ -1,26 +1,43 @@
-// ===== HEADER =====
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  if (window.scrollY > 50) {
-    header.style.background = 'rgba(10,10,30,0.95)';
-  } else {
-    header.style.background = 'rgba(10,10,30,0.8)';
-  }
-});
+// script.js
+// Archivo base listo para completar según las funciones que quieras.
+// Ahora mismo incluye animaciones suaves, menú responsive y scroll.
 
-// ===== SECCIONES ANIMADAS =====
-document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('section');
-
-  function checkSections() {
-    sections.forEach(section => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        section.classList.add('visible');
-      }
+// --- Animación suave al hacer scroll ---
+const scrollLinks = document.querySelectorAll('a[href^="#"]');
+scrollLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const section = document.querySelector(link.getAttribute('href'));
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
     });
-  }
-
-  window.addEventListener('scroll', checkSections);
-  checkSections(); // para mostrar secciones ya visibles al cargar
 });
+
+// --- Menú Responsive ---
+const menuBtn = document.querySelector('.menu-btn');
+const nav = document.querySelector('nav');
+
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+    });
+}
+
+// --- Animación de aparición al hacer scroll ---
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// --- Aquí puedo añadir más funciones ---
+// Ejemplos:
+// - Carrusel de productos
+// - Galería interactiva
+// - Animaciones 3D
+// - Enviar formulario por email
+// - Efectos de luz neon al pasar el ratón
+// Sólo dime qué quieres y te lo añado.

@@ -1,3 +1,5 @@
+/* Nuevo CSS actualizado para menú centrado, diseño pulido y secciones nuevas */
+
 /* ===== BASE ===== */
 body {
   margin: 0;
@@ -22,12 +24,32 @@ header {
   z-index: 1000;
 }
 
+/* NAV CENTRADO */
+.nav-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav a {
+  color: #a6a4ff;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1.05rem;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 15px #8b6fff;
+}
+
+/* ===== LOGO ===== */
 .logo-container {
   display: flex;
   align-items: center;
 }
 
-/* ===== LOGO ANIMADO ===== */
 .logo {
   width: 55px;
   height: 55px;
@@ -44,7 +66,6 @@ header {
   100% { transform: rotate(-5deg) translateY(0); }
 }
 
-/* ===== TÍTULO ANIMADO ===== */
 .title {
   font-family: 'Audiowide', sans-serif;
   font-size: 1.8rem;
@@ -52,27 +73,15 @@ header {
   animation: neonPulse 3s infinite alternate, floatTitle 3s ease-in-out infinite alternate;
 }
 
-@keyframes floatTitle {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
-}
-
 @keyframes neonPulse {
   0% { text-shadow: 0 0 5px #ff4ff6, 0 0 10px #ff4ff6; }
   100% { text-shadow: 0 0 20px #4fafff, 0 0 40px #4fafff; }
 }
 
-nav a {
-  color: #a6a4ff;
-  margin-left: 25px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #fff;
-  text-shadow: 0 0 15px #8b6fff;
+@keyframes floatTitle {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
 }
 
 /* ===== HERO ===== */
@@ -88,18 +97,13 @@ nav a:hover {
   animation: fadeInUp 1s forwards;
 }
 
-.fade-in:nth-child(2) {
-  animation-delay: 0.4s;
-}
+.fade-in:nth-child(2) { animation-delay: 0.4s; }
 
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== SECCIONES CENTRADAS ===== */
+/* ===== SECCIONES ===== */
 section {
   max-width: 900px;
   margin: 0 auto;
@@ -138,6 +142,18 @@ section h2 {
   box-shadow: 0 0 25px rgba(255, 79, 246, 0.4);
 }
 
+/* ===== LISTAS ===== */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
 /* ===== GALERÍA ===== */
 .gallery {
   display: flex;
@@ -158,8 +174,7 @@ section h2 {
   box-shadow: 0 0 20px rgba(79, 175, 255, 0.5);
 }
 
-/* ===== RRSS ===== */
-
+/* ===== REDES ===== */
 .social-projects {
   display: flex;
   flex-wrap: wrap;
@@ -168,16 +183,15 @@ section h2 {
   margin-top: 30px;
 }
 
-.social, .project {
+.social {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 120px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: 0.3s;
 }
 
-.social img, .project img {
+.social img {
   width: 40px;
   height: 40px;
   border-radius: 15px;
@@ -186,13 +200,13 @@ section h2 {
   box-shadow: 0 0 15px rgba(255,255,255,0.2);
 }
 
-.social:hover, .project:hover {
+.social:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(255,79,246,0.4);
 }
 
 .social-name {
-  font-family: 'Audiowide', cursive; /* tipografía guapa */
+  font-family: 'Audiowide';
   font-size: 1rem;
   color: #ff4ff6;
   text-shadow: 0 0 8px #8b6fff;
@@ -209,5 +223,25 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  nav a {
+    margin-left: 12px;
+    font-size: 0.9rem;
+  }
 
+  .nav-centered {
+    width: 100%;
+    left: 50%;
+    text-align: center;
+  }
 
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+}
