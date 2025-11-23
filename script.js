@@ -41,15 +41,3 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // - Enviar formulario por email
 // - Efectos de luz neon al pasar el ratón
 // Sólo dime qué quieres y te lo añado.
-
-/* Reducir al mínimo el espacio entre secciones */
-section {
-    padding: 20px 0; /* Muy poco espacio arriba y abajo */
-}
-
-
-
-/* Espacio aún más reducido entre secciones */
-section {
-    padding: 8px 0; /* Casi pegadas */
-}
