@@ -115,9 +115,9 @@ section {
   margin: 0 auto;
   padding: 40px 15px;
   text-align: center;
-  /* opacity: 0; 
+  opacity: 0; 
   transform: translateY(30px);
-  transition: all 0.8s ease-out; */
+  transition: all 0.8s ease-out; 
 }
 
 section.visible {
@@ -218,6 +218,7 @@ footer {
   background: rgba(10, 10, 25, 0.8);
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+
 
 
 
