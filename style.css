@@ -92,6 +92,13 @@ nav a:hover {
   padding-bottom: 100px;
 }
 
+.hero ul li {
+  font-family: 'Fira Code', monospace; /* Tipografía tecnológica */
+  font-size: 1.25rem;   /* Letras un poco más grandes */
+  line-height: 1.6;     /* Espacio entre líneas */
+  margin-bottom: 0.5rem; /* Separación entre items */
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -218,6 +225,7 @@ footer {
   background: rgba(10, 10, 25, 0.8);
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+
 
 
 
