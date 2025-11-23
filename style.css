@@ -7,6 +7,12 @@ body {
   scroll-behavior: smooth;
 }
 
+
+body {
+  padding-top: 100px; /* Ajusta según la altura de tu header */
+}
+
+
 /* ===== HEADER ===== */
 header {
   position: fixed;
@@ -208,6 +214,7 @@ footer {
   background: rgba(10, 10, 25, 0.8);
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+
 
 
 
